@@ -142,6 +142,8 @@ In addition, we thank Lindsay Popowski, Philip Guo, Michael Terry, and the Cente
 
 1. 修复 openai 模型已经弃用的bug. 错误信息: `TOKEN LIMIT EXCEEDED`
 
+2. 修复 http://localhost:8000/simulator_home `page not found` 以及 `run 1+` 时陷入死循环的 bug
+
 
 ## Update
 
