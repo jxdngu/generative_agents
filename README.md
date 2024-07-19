@@ -138,4 +138,37 @@ We encourage you to support the following three amazing artists who have designe
 
 In addition, we thank Lindsay Popowski, Philip Guo, Michael Terry, and the Center for Advanced Study in the Behavioral Sciences (CASBS) community for their insights, discussions, and support. Lastly, all locations featured in Smallville are inspired by real-world locations that Joon has frequented as an undergraduate and graduate student---he thanks everyone there for feeding and supporting him all these years.
 
+## Commit
 
+1. 修复 openai 模型已经弃用的bug. 错误信息: `TOKEN LIMIT EXCEEDED`
+
+
+## Update
+
+1. 更新 `reverie/backend_server` 路径下 `utils.py` 文件内容为
+
+    ```Python
+    import os
+    DIR = os.path.dirname(os.path.abspath(__file__))
+    ROOT = DIR.split('/reverie/')[0]
+
+    openai_model = 'babbage-002'    # ['babbage-002', 'davinci-002']
+    # Copy and paste your OpenAI API Key
+    openai_api_key = "${KEY}"
+    # Put your name
+    key_owner = "<Name>"
+
+    maze_assets_loc = f"{ROOT}/environment/frontend_server/static_dirs/assets"
+    env_matrix = f"{maze_assets_loc}/the_ville/matrix"
+    env_visuals = f"{maze_assets_loc}/the_ville/visuals"
+
+    fs_storage = f"{ROOT}/environment/frontend_server/storage"
+    fs_temp_storage = f"{ROOT}/environment/frontend_server/temp_storage"
+
+    collision_block_id = "32125"
+
+    # Verbose 
+    debug = True
+    ```
+
+2. 更新调用的openai模型, 截止2024.07.20, `babbage-002`和`davinci-002` 模型可用, 其他未测试. openai 可用模型见 [https://platform.openai.com/docs/deprecations]
