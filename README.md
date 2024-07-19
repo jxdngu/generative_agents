@@ -144,6 +144,8 @@ In addition, we thank Lindsay Popowski, Philip Guo, Michael Terry, and the Cente
 
 2. 修复 http://localhost:8000/simulator_home `page not found` 以及 `run 1+` 时陷入死循环的 bug
 
+3. 修复 FileNotFoundError: [Errno 2] No such file or directory: '../../environment/frontend_server/storage/test-simulation/movement/0.json' 的bug
+
 
 ## Update
 
