@@ -396,10 +396,7 @@ def run_gpt_prompt_task_decomp(persona,
         if task[-6:] == "(total": 
             task = task[:-6]
         duration = k[1].split(" ")[-1].strip()
-      if duration[-2:] == "):": 
-        duration = duration[:-2]
-      print(duration)
-      duration = int(duration)
+      duration = int(re.findall(r'\d+', duration)[0])
       cr += [[task, duration]]
 
     total_expected_min = int(prompt.split("(total duration in minutes")[-1]
