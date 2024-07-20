@@ -150,6 +150,8 @@ In addition, we thank Lindsay Popowski, Philip Guo, Michael Terry, and the Cente
 
 5. 修复解析llm模型返回计划的bug(IndexError: string index out of range)
 
+6. 增加缩放功能, Z放大, X缩小
+
 
 ## Update
 
@@ -180,3 +182,5 @@ In addition, we thank Lindsay Popowski, Philip Guo, Michael Terry, and the Cente
     ```
 
 2. 更新调用的openai模型, 截止2024.07.20, `babbage-002`和`davinci-002` 模型可用, 其他未测试. openai 可用模型见 [https://platform.openai.com/docs/deprecations]
+
+3. 增加缩放功能, Z放大, X缩小
