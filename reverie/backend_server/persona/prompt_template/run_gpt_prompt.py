@@ -67,7 +67,7 @@ def run_gpt_prompt_wake_up_hour(persona, test_input=None, verbose=False):
     fs = 8
     return fs
 
-  gpt_param = {"engine": "text-davinci-002", "max_tokens": 5, 
+  gpt_param = {"engine": openai_model, "max_tokens": 5, 
              "temperature": 0.8, "top_p": 1, "stream": False,
              "frequency_penalty": 0, "presence_penalty": 0, "stop": ["\n"]}
   prompt_template = "persona/prompt_template/v2/wake_up_hour_v1.txt"
@@ -245,7 +245,7 @@ def run_gpt_prompt_generate_hourly_schedule(persona,
   #   return True
 
   # print ("asdhfapsh8p9hfaiafdsi;ldfj as DEBUG 10") ########
-  # gpt_param = {"engine": "text-davinci-002", "max_tokens": 15, 
+  # gpt_param = {"engine": openai_model, "max_tokens": 15, 
   #              "temperature": 0, "top_p": 1, "stream": False,
   #              "frequency_penalty": 0, "presence_penalty": 0, "stop": None}
   # prompt_template = "persona/prompt_template/v3_ChatGPT/generate_hourly_schedule_v2.txt" ########
@@ -607,7 +607,7 @@ def run_gpt_prompt_action_sector(action_description,
   #   return True 
 
   # print ("asdhfapsh8p9hfaiafdsi;ldfj as DEBUG 20") ########
-  # gpt_param = {"engine": "text-davinci-002", "max_tokens": 15, 
+  # gpt_param = {"engine": openai_model, "max_tokens": 15, 
   #              "temperature": 0, "top_p": 1, "stream": False,
   #              "frequency_penalty": 0, "presence_penalty": 0, "stop": None}
   # prompt_template = "persona/prompt_template/v3_ChatGPT/action_location_sector_v2.txt" ########
@@ -626,7 +626,7 @@ def run_gpt_prompt_action_sector(action_description,
 
 
 
-  gpt_param = {"engine": "text-davinci-002", "max_tokens": 15, 
+  gpt_param = {"engine": openai_model, "max_tokens": 15, 
                "temperature": 0, "top_p": 1, "stream": False,
                "frequency_penalty": 0, "presence_penalty": 0, "stop": None}
   prompt_template = "persona/prompt_template/v1/action_location_sector_v1.txt"
@@ -849,7 +849,7 @@ def run_gpt_prompt_pronunciatio(action_description, persona, verbose=False):
     return True
 
   print ("asdhfapsh8p9hfaiafdsi;ldfj as DEBUG 4") ########
-  gpt_param = {"engine": "text-davinci-002", "max_tokens": 15, 
+  gpt_param = {"engine": openai_model, "max_tokens": 15, 
                "temperature": 0, "top_p": 1, "stream": False,
                "frequency_penalty": 0, "presence_penalty": 0, "stop": None}
   prompt_template = "persona/prompt_template/v3_ChatGPT/generate_pronunciatio_v1.txt" ########
@@ -939,7 +939,7 @@ def run_gpt_prompt_event_triple(action_description, persona, verbose=False):
   #   return True 
 
   # print ("asdhfapsh8p9hfaiafdsi;ldfj as DEBUG 5") ########
-  # gpt_param = {"engine": "text-davinci-002", "max_tokens": 15, 
+  # gpt_param = {"engine": openai_model, "max_tokens": 15, 
   #              "temperature": 0, "top_p": 1, "stream": False,
   #              "frequency_penalty": 0, "presence_penalty": 0, "stop": None}
   # prompt_template = "persona/prompt_template/v3_ChatGPT/generate_event_triple_v1.txt" ########
@@ -1025,7 +1025,7 @@ def run_gpt_prompt_act_obj_desc(act_game_object, act_desp, persona, verbose=Fals
     return True 
 
   print ("asdhfapsh8p9hfaiafdsi;ldfj as DEBUG 6") ########
-  gpt_param = {"engine": "text-davinci-002", "max_tokens": 15, 
+  gpt_param = {"engine": openai_model, "max_tokens": 15, 
                "temperature": 0, "top_p": 1, "stream": False,
                "frequency_penalty": 0, "presence_penalty": 0, "stop": None}
   prompt_template = "persona/prompt_template/v3_ChatGPT/generate_obj_event_v1.txt" ########
@@ -1650,7 +1650,7 @@ def run_gpt_prompt_summarize_conversation(persona, conversation, test_input=None
 
 
   print ("asdhfapsh8p9hfaiafdsi;ldfj as DEBUG 11") ########
-  gpt_param = {"engine": "text-davinci-002", "max_tokens": 15, 
+  gpt_param = {"engine": openai_model, "max_tokens": 15, 
                "temperature": 0, "top_p": 1, "stream": False,
                "frequency_penalty": 0, "presence_penalty": 0, "stop": None}
   prompt_template = "persona/prompt_template/v3_ChatGPT/summarize_conversation_v1.txt" ########
@@ -1903,7 +1903,7 @@ def run_gpt_prompt_event_poignancy(persona, event_description, test_input=None, 
       return False 
 
   print ("asdhfapsh8p9hfaiafdsi;ldfj as DEBUG 7") ########
-  gpt_param = {"engine": "text-davinci-002", "max_tokens": 15, 
+  gpt_param = {"engine": openai_model, "max_tokens": 15, 
                "temperature": 0, "top_p": 1, "stream": False,
                "frequency_penalty": 0, "presence_penalty": 0, "stop": None}
   prompt_template = "persona/prompt_template/v3_ChatGPT/poignancy_event_v1.txt" ########
@@ -1974,7 +1974,7 @@ def run_gpt_prompt_thought_poignancy(persona, event_description, test_input=None
       return False 
 
   print ("asdhfapsh8p9hfaiafdsi;ldfj as DEBUG 8") ########
-  gpt_param = {"engine": "text-davinci-002", "max_tokens": 15, 
+  gpt_param = {"engine": openai_model, "max_tokens": 15, 
                "temperature": 0, "top_p": 1, "stream": False,
                "frequency_penalty": 0, "presence_penalty": 0, "stop": None}
   prompt_template = "persona/prompt_template/v3_ChatGPT/poignancy_thought_v1.txt" ########
@@ -2046,7 +2046,7 @@ def run_gpt_prompt_chat_poignancy(persona, event_description, test_input=None, v
       return False 
 
   print ("asdhfapsh8p9hfaiafdsi;ldfj as DEBUG 9") ########
-  gpt_param = {"engine": "text-davinci-002", "max_tokens": 15, 
+  gpt_param = {"engine": openai_model, "max_tokens": 15, 
                "temperature": 0, "top_p": 1, "stream": False,
                "frequency_penalty": 0, "presence_penalty": 0, "stop": None}
   prompt_template = "persona/prompt_template/v3_ChatGPT/poignancy_chat_v1.txt" ########
@@ -2122,7 +2122,7 @@ def run_gpt_prompt_focal_pt(persona, statements, n, test_input=None, verbose=Fal
 
 
   print ("asdhfapsh8p9hfaiafdsi;ldfj as DEBUG 12") ########
-  gpt_param = {"engine": "text-davinci-002", "max_tokens": 15, 
+  gpt_param = {"engine": openai_model, "max_tokens": 15, 
                "temperature": 0, "top_p": 1, "stream": False,
                "frequency_penalty": 0, "presence_penalty": 0, "stop": None}
   prompt_template = "persona/prompt_template/v3_ChatGPT/generate_focal_pt_v1.txt" ########
@@ -2249,7 +2249,7 @@ def run_gpt_prompt_agent_chat_summarize_ideas(persona, target_persona, statement
       return False 
 
   print ("asdhfapsh8p9hfaiafdsi;ldfj as DEBUG 17") ########
-  gpt_param = {"engine": "text-davinci-002", "max_tokens": 15, 
+  gpt_param = {"engine": openai_model, "max_tokens": 15, 
                "temperature": 0, "top_p": 1, "stream": False,
                "frequency_penalty": 0, "presence_penalty": 0, "stop": None}
   prompt_template = "persona/prompt_template/v3_ChatGPT/summarize_chat_ideas_v1.txt" ########
@@ -2317,7 +2317,7 @@ def run_gpt_prompt_agent_chat_summarize_relationship(persona, target_persona, st
       return False 
 
   print ("asdhfapsh8p9hfaiafdsi;ldfj as DEBUG 18") ########
-  gpt_param = {"engine": "text-davinci-002", "max_tokens": 15, 
+  gpt_param = {"engine": openai_model, "max_tokens": 15, 
                "temperature": 0, "top_p": 1, "stream": False,
                "frequency_penalty": 0, "presence_penalty": 0, "stop": None}
   prompt_template = "persona/prompt_template/v3_ChatGPT/summarize_chat_relationship_v2.txt" ########
@@ -2445,7 +2445,7 @@ def run_gpt_prompt_agent_chat(maze, persona, target_persona,
 
 
   # print ("HERE JULY 23 -- ----- ") ########
-  gpt_param = {"engine": "text-davinci-002", "max_tokens": 15, 
+  gpt_param = {"engine": openai_model, "max_tokens": 15, 
                "temperature": 0, "top_p": 1, "stream": False,
                "frequency_penalty": 0, "presence_penalty": 0, "stop": None}
   prompt_template = "persona/prompt_template/v3_ChatGPT/agent_chat_v1.txt" ########
@@ -2526,7 +2526,7 @@ def run_gpt_prompt_summarize_ideas(persona, statements, question, test_input=Non
       return False 
 
   print ("asdhfapsh8p9hfaiafdsi;ldfj as DEBUG 16") ########
-  gpt_param = {"engine": "text-davinci-002", "max_tokens": 15, 
+  gpt_param = {"engine": openai_model, "max_tokens": 15, 
                "temperature": 0, "top_p": 1, "stream": False,
                "frequency_penalty": 0, "presence_penalty": 0, "stop": None}
   prompt_template = "persona/prompt_template/v3_ChatGPT/summarize_ideas_v1.txt" ########
@@ -2600,7 +2600,7 @@ def run_gpt_prompt_generate_next_convo_line(persona, interlocutor_desc, prev_con
   #     return False 
 
   # print ("asdhfapsh8p9hfaiafdsi;ldfj as DEBUG 15") ########
-  # gpt_param = {"engine": "text-davinci-002", "max_tokens": 15, 
+  # gpt_param = {"engine": openai_model, "max_tokens": 15, 
   #              "temperature": 0, "top_p": 1, "stream": False,
   #              "frequency_penalty": 0, "presence_penalty": 0, "stop": None}
   # prompt_template = "persona/prompt_template/v3_ChatGPT/generate_next_convo_line_v1.txt" ########
@@ -2745,7 +2745,7 @@ def run_gpt_prompt_memo_on_convo(persona, all_utt, test_input=None, verbose=Fals
 
 
   print ("asdhfapsh8p9hfaiafdsi;ldfj as DEBUG 15") ########
-  gpt_param = {"engine": "text-davinci-002", "max_tokens": 15, 
+  gpt_param = {"engine": openai_model, "max_tokens": 15, 
                "temperature": 0, "top_p": 1, "stream": False,
                "frequency_penalty": 0, "presence_penalty": 0, "stop": None}
   prompt_template = "persona/prompt_template/v3_ChatGPT/memo_on_convo_v1.txt" ########
