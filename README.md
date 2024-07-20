@@ -148,6 +148,8 @@ In addition, we thank Lindsay Popowski, Philip Guo, Michael Terry, and the Cente
 
 4. 修复前端只有部分显示的 bug
 
+5. 修复解析llm模型返回计划的bug(IndexError: string index out of range)
+
 
 ## Update
 
