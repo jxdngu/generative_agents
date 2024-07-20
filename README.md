@@ -146,6 +146,8 @@ In addition, we thank Lindsay Popowski, Philip Guo, Michael Terry, and the Cente
 
 3. 修复 FileNotFoundError: [Errno 2] No such file or directory: '../../environment/frontend_server/storage/test-simulation/movement/0.json' 的bug
 
+4. 修复前端只有部分显示的 bug
+
 
 ## Update
 
